@@ -1,0 +1,12 @@
+.section-title {
+  text-align: center;
+}
+
+.canvas-container {
+  width: 500px !important;
+  height: 500px !important ;
+}
+
+.active {
+  background-color: white;
+}
