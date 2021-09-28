@@ -12,7 +12,7 @@ const Scene = () => {
   return <primitive object={fbx} scale={0.05} />;
 };
 
-export default function ModelViewerObj() {
+export default function ModelViewerFbx() {
   return (
     <Canvas className="canvas-container border-gray-500 bg-black border-2 rounded-xl">
       <PerspectiveCamera
