@@ -19,6 +19,7 @@ export default function ModelViewerObj() {
         makeDefault
         // aspect={1200 / 600}
         // radius={(1200 + 600) / 4}
+        far={600}
         fov={45}
         position={[0, 0, 100]} />
       <Suspense fallback={null}>

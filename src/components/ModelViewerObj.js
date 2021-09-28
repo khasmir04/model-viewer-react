@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
 // import { Environment } from "@react-three/drei";
 // Use environment for custom background
-import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
+import { PerspectiveCamera, OrbitControls, Stars, Center } from "@react-three/drei";
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { Suspense } from "react";
@@ -27,7 +27,10 @@ export default function ModelViewerObj() {
         fov={45}
         position={[0, 0, 100]} />
       <Suspense fallback={null}>
-        <Scene />
+        <Stars />
+        <Center>
+          <Scene />
+        </Center>
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 3000, 10]} angle={0.3} />
         <OrbitControls />
