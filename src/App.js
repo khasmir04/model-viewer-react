@@ -1,8 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
 import './Custom.css';
-import './components/ModelViewer';
-import ModelViewer from './components/ModelViewer';
+import Header from './components/Header';
+import ModelViewerObj from './components/ModelViewerObj';
+import ModelViewerFbx from './components/ModelViewerFbx';
 import { useState } from 'react'
 
 function App() {
@@ -14,19 +15,27 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container mx-auto">
-        <div className="flex bg-gray-400 mx-auto w-6/12 items-center mb-6">
+      <Header />
+      <section id="main" className="container mx-auto h-[calc(100vh-80px)]">
+        <div className="flex mx-auto w-6/12 items-center pt-6 mb-6">
           <div
-            className={"hover:bg-white hover:text-black border-2 border-gray-400 cursor-pointer w-full tab " + (activeTab === "ship" ? 'active' : '')}
+            className={"hover:bg-white hover:text-black border-2 text-white bg-gray-400 border-gray-400 cursor-pointer w-full tab " + (activeTab === "ship" ? 'active' : '')}
             onClick={() => switchTab("ship")}>Ship</div>
           <div
-            className={"hover:bg-white hover:text-black border-2 border-gray-400 cursor-pointer w-full tab " + (activeTab === "location" ? 'active' : '')}
+            className={"hover:bg-white hover:text-black border-2 text-white bg-gray-400 border-gray-400 cursor-pointer w-full tab " + (activeTab === "location" ? 'active' : '')}
             onClick={() => switchTab("location")}>Location</div>
         </div>
         <div className="flex justify-center">
-          <ModelViewer />
+          {
+            activeTab === "ship" ?
+              // For Ship
+              <ModelViewerFbx />
+              :
+              // For Location
+              <ModelViewerObj />
+          }
         </div>
-      </div>
+      </section>
     </div>
   );
 }

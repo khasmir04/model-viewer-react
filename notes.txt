@@ -1,0 +1,2 @@
+Use only one file type for models
+Have a standard size for models (scaling)
