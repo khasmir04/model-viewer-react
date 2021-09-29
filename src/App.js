@@ -4,8 +4,9 @@ import './Custom.css';
 import './index.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ModelViewerObj from './components/ModelViewerObj';
+// import ModelViewerObj from './components/ModelViewerObj';
 import ModelViewerFbx from './components/ModelViewerFbx';
+import ModelViewerGltf from './components/ModelViewerGltf';
 import { useState } from 'react'
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
               <ModelViewerFbx />
               :
               // For Location
-              <ModelViewerObj />
+              <ModelViewerGltf />
           }
         </div>
       </section>

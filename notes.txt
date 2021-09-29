@@ -1,2 +1,21 @@
+===============================================================
+Initial:
+===============================================================
 Use only one file type for models
 Have a standard size for models (scaling)
+
+To Add:
+Zooming out limit
+Standard human size model - basis for all assets - System?
+White background (with water? no)
+Final model type is gltf
+
+https://rjtedoco.gitbook.io/augmented-reality/
+
+===============================================================
+1st meeting review:
+===============================================================
+Zoom out - waiting
+Standard size: Use human model with height of 2 meters
+White background done
+Convert glb to gltf then use GLTFLoader
