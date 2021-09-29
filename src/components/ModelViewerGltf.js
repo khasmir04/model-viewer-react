@@ -31,7 +31,7 @@ export default function ModelViewerGltf() {
           <Center>
             <Model />
           </Center>
-          <OrbitControls />
+          <OrbitControls maxDistance={5} />
         </Suspense>
         <EffectComposer>
           {/* <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} height={480} /> */}

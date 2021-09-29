@@ -15,7 +15,7 @@ https://rjtedoco.gitbook.io/augmented-reality/
 ===============================================================
 1st meeting review:
 ===============================================================
-Zoom out - waiting
+Zooming out limit done
 Standard size: Use human model with height of 2 meters
 White background done
 Convert glb to gltf then use GLTFLoader

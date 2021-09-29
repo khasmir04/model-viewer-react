@@ -43,7 +43,7 @@ export default function ModelViewerObj() {
         </Center>
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 3000, 10]} angle={0.3} />
-        <OrbitControls />
+        <OrbitControls maxDistance={300} />
         {/* <Environment preset="sunset" background /> */}
       </Suspense>
       <EffectComposer>

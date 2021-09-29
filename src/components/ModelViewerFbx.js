@@ -38,7 +38,7 @@ export default function ModelViewerFbx() {
         </Center>
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 3000, 10]} angle={0.3} />
-        <OrbitControls />
+        <OrbitControls maxDistance={100} />
         {/* <Environment preset="sunset" background /> */}
       </Suspense>
       {/* <EffectComposer>
