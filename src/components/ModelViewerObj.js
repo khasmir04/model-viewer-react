@@ -6,11 +6,12 @@ import { PerspectiveCamera, OrbitControls, Stars, Center } from "@react-three/dr
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { Suspense } from "react";
+import { EffectComposer, DepthOfField, Bloom, Noise, Vignette } from '@react-three/postprocessing'
 
 // USING OBJ
 const Scene = () => {
-  const mtl = useLoader(MTLLoader, './assets/location/island/pirate.mtl')
-  const obj = useLoader(OBJLoader, './assets/location/island/pirate.obj', loader => {
+  const mtl = useLoader(MTLLoader, './assets/location/tropical/Small_Tropical_Island.mtl')
+  const obj = useLoader(OBJLoader, './assets/location/tropical/Small Tropical Island.obj', loader => {
     mtl.preload()
     loader.setMaterials(mtl)
   })
@@ -19,7 +20,8 @@ const Scene = () => {
 
 export default function ModelViewerObj() {
   return (
-    <Canvas className="canvas-container border-gray-500 bg-black border-2 rounded-xl">
+    <Canvas colorManagement={false} color="red"
+      className="canvas-container border-gray-500 bg-black border-2 rounded-xl">
       <PerspectiveCamera
         makeDefault
         // aspect={1200 / 600}
@@ -36,6 +38,12 @@ export default function ModelViewerObj() {
         <OrbitControls />
         {/* <Environment preset="sunset" background /> */}
       </Suspense>
+      <EffectComposer>
+        <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} height={480} />
+        <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
+        <Noise opacity={0.02} />
+        <Vignette eskil={false} offset={0.1} darkness={1.1} />
+      </EffectComposer>
     </Canvas>
   );
 }

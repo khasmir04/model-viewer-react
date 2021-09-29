@@ -7,7 +7,6 @@ export default function Header() {
           <h1 className="section-title text-3xl">TERP Content 3D Model Viewer</h1>
         </div>
       </div>
-
     </>
   );
 }
