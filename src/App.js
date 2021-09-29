@@ -1,7 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
 import './Custom.css';
+import './index.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import ModelViewerObj from './components/ModelViewerObj';
 import ModelViewerFbx from './components/ModelViewerFbx';
 import { useState } from 'react'
@@ -14,15 +16,15 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App text-center">
       <Header />
-      <section id="main" className="container mx-auto h-[calc(100vh-80px)]">
+      <section id="main" className="container mx-auto h-[calc(100vh-160px)] text-center">
         <div className="flex mx-auto w-6/12 items-center pt-6 mb-6">
           <div
-            className={"hover:bg-white hover:text-black border-2 text-xl text-white bg-gray-400 border-gray-400 cursor-pointer w-full tab " + (activeTab === "ship" ? 'active' : '')}
+            className={"hover:bg-white hover:text-black border-2 text-center text-xl text-white bg-gray-400 border-gray-400 cursor-pointer w-full tab " + (activeTab === "ship" ? 'active' : '')}
             onClick={() => switchTab("ship")}>Ship Type</div>
           <div
-            className={"hover:bg-white hover:text-black border-2 text-xl text-white bg-gray-400 border-gray-400 cursor-pointer w-full tab " + (activeTab === "area" ? 'active' : '')}
+            className={"hover:bg-white hover:text-black border-2 text-center text-xl text-white bg-gray-400 border-gray-400 cursor-pointer w-full tab " + (activeTab === "area" ? 'active' : '')}
             onClick={() => switchTab("area")}>Exercise Area</div>
         </div>
         <div className="flex justify-center">
@@ -36,6 +38,7 @@ function App() {
           }
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
