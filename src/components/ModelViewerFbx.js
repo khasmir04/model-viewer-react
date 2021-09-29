@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
-// import { Environment } from "@react-three/drei";
 // Use environment for custom background
+// import { Environment } from "@react-three/drei";
 import { PerspectiveCamera, OrbitControls, Stars, Center } from "@react-three/drei";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { Suspense } from "react";
@@ -14,11 +14,13 @@ const Scene = () => {
 
 export default function ModelViewerFbx() {
   return (
-    <Canvas className="canvas-container border-gray-500 bg-black border-2 rounded-xl">
+    <Canvas linear={true}
+      className="canvas-container border-gray-500 bg-black border-2 rounded-xl">
       <PerspectiveCamera
         makeDefault
         // aspect={1200 / 600}
         // radius={(1200 + 600) / 4}
+        // near={100}
         far={600}
         fov={45}
         position={[0, 0, 100]} />
