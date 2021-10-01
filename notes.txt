@@ -19,3 +19,10 @@ Zooming out limit done
 Standard size: Use human model with height of 2 meters
 White background done
 Convert glb to gltf then use GLTFLoader
+
+===============================================================
+2nd meeting review:
+===============================================================
+Look for glb library
+Upload into cloud so others can preview
+File upload of glb file
