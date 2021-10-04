@@ -1,5 +1,5 @@
 ===============================================================
-Initial:
+WEEK 1:
 ===============================================================
 Use only one file type for models
 Have a standard size for models (scaling)
@@ -13,7 +13,7 @@ Final model type is gltf
 https://rjtedoco.gitbook.io/augmented-reality/
 
 ===============================================================
-1st meeting review:
+1.1 meeting review:
 ===============================================================
 Zooming out limit done
 Standard size: Use human model with height of 2 meters
@@ -21,8 +21,15 @@ White background done
 Convert glb to gltf then use GLTFLoader
 
 ===============================================================
-2nd meeting review:
+1.2 meeting review:
 ===============================================================
 Look for glb library
 Upload into cloud so others can preview
 File upload of glb file
+
+===============================================================
+WEEK 2:
+===============================================================
+gltf component also works on glb file
+- Lost transparency
+Upload to vercel: https://model-viewer-react-drab.vercel.app/
