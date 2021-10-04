@@ -11578,7 +11578,7 @@
     "potpack" "^1.0.1"
     "zstddec" "^0.0.2"
 
-"three@>= 0.102.0 < 0.133.0", "three@>= 0.123.0", "three@>=0.103.0", "three@>=0.126", "three@>=0.128.0", "three@>=0.130.1":
+"three@^0.132.2", "three@>= 0.102.0 < 0.133.0", "three@>= 0.123.0", "three@>=0.103.0", "three@>=0.126", "three@>=0.128.0", "three@>=0.130.1":
   "integrity" "sha512-0wcR7LxxkXMn6Gi58gEs3QvY8WpTVXA31L2VOvpjm4ZPYFRHCZC13UqynheFoS5OXDYgtBneN0dhbaNBE8iLhQ=="
   "resolved" "https://registry.npmjs.org/three/-/three-0.132.2.tgz"
   "version" "0.132.2"
