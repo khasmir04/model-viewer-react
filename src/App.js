@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <div className="App text-center">
+    <div className="App text-center select-none">
       <Header />
       <section id="main" className="container mx-auto h-[calc(100vh-160px)] text-center">
         <div className="flex mx-auto w-6/12 items-center pt-6 mb-6">
